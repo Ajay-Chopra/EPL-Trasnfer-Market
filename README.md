@@ -13,3 +13,15 @@
 
 
 
+## The Data Sets ##
+
+I first compiled the competitive statsitcs of each team in the EPL for every season from 13/14 to 17/18 using data from Opta Sports. These include offensive, possession-based, defensive and goalkeeping statiscs for each team on a per game basis. I then merged these with data for each club's transfer spending, final points total and final league position for each season. 
+
+
+
+
+
+
+
+
+
