@@ -53,6 +53,28 @@ The graph below plots final league position against transfer spending for every 
 From a simple visual test, it is easy to see that higher transfer spending is not highly correlated with a better league position. In fact, after creating a corrplot for the data, I found that there is only a 0.07 correlation between transfer spending and final league position. This is not only less than many members of the footballing community would likely suggest, but also far less than it ought to be, given the sums of money spent and the importance placed on trasnfer windows. In other words, it seems as if football clubs are often receiving a poor return on their trasnsfer investments. 
 
 
+## How Clubs Buy Players ##
+
+In order to understand where inefficienices arise in the transfer market, one must first understand what criteria clubs use to value players. I analyze the transfer-data set in order to answer this question.
+
+First, I look at transfer price based on player position. The plot is shown below.
+
+
+![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Transfer%20Fee%20vs.%20Player%20Position.png)
+
+As we can see, attackers and midfielders fetch the highest transfer fees amongst EPL clubs, while defenders and goalkeepers are bought for less on average. In fact, after creating a corrplot for the transfer-data, one sees that a player's offensive rating is more highly correlated to a higher transfer price than is his defensive rating.
+
+![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Transfer%20CorrPlot.png)
+
+Thus, several surface-level indicators show that clubs value offensive players more highly than they do their defensive counterparts.
+
+There are other interesting plots to examine, though they are not necessarily pertinent to the direction of this project. For instance, we can look at a player's transfer fee based on his age.
+
+![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Transfer%20Fee%20vs.%20Age.png)
+
+Here, it seems that clubs highly value players in their early twenties, likely wanting to capture young talent before injury strikes. 
+
+
 
 
 
