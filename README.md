@@ -15,6 +15,7 @@
 
 ## The Data ##
 
+#### Team Performance Statistics ####
 I compiled the in-game statsitcs of each team in the EPL for every season from 13/14 to 17/18 using data from Opta Sports, henceforth referred to as the "team-stats" data set. These include offensive, possession-based, defensive and goalkeeping statiscs for each team on a per game basis. I then merged these with data for each club's transfer spending, final points total and final league position for each season. The image below gives a brief snapshot of the data.
 
 ![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Competitve%20Stats%20Data-Set.png)
@@ -25,16 +26,20 @@ I also compiled a data set that tracks goal statistics at different game states,
 
 For instance, in the snapshot above, we see that out of all the goals that Arsenal scored in the 17/18 season, 12 came in minutes 1-15 of the game. Similarly, Arsenal allowed 9 goals in the first fifteen minutes of games for that season. The full data set can be found here. 
 
-The second data set was compiled from Opta Sports data and data from https://www.transfermarkt.com/. It lists all the players pruchased by EPL clubs during the seasons from 13/14 to 17/18, their position, transfer fee, as well as offensive, possession, and defensive ratings compiled by Opta Sports. The full data set can be found here.
+
+#### Transfer Data ####
+The second data set was compiled from Opta Sports data and data from https://www.transfermarkt.com/. It lists all the players pruchased by EPL clubs during the seasons from 13/14 to 17/18 and their transfer fee. Additional parameters include player attributes that I hypothesized would be highly likley to influence the tranfser fee. The list was based on reviewing current literature on the subject, which I have compiled here. From the literature, it seems that the player attributes that most greatly affect trasnfer fee are age, number of games played in the previous season, number of international caps, nationality and height. I combined these with offensvie, defensive and possession-based ratings to create the final data set. A snapshot is shown below, and the full data set can be found here.
 
 ![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Transfer-Data.png)
 
-The last data set is the the full ranking of every professional soccer player as used in the FIFA 2018 videogame. While the exact methodology that EA Sports uses to construct its rankings is obsucre to say the least, the FIFA 2018 rankings are the best we have in terms of comprehensive player valuations. The full data set can be found here.
+#### Player Rankings ####
+
+The last data set is the the full ranking of every professional footballer as used in the FIFA 2018 videogame. While the exact methodology that EA Sports uses to construct its rankings is obsucre, the FIFA 2018 rankings are the best we have in terms of current, comprehensive player valuations. The full data set can be found here.
 
 ![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Player-Rankings.png)
 
 
-## Preliminary Data Analysis ##
+## Understanding the Transfer Market ##
 
 In order to get a sense of the current mechanics of the EPL transfer market, one ought to begin by separating big and small spenders. Currently, transfer spending in the EPL is dominated by the league's wealthiest and most successful clubs--Arsenal, Chelsea, Liverpool, Manchester United, Manchester City and Tottenham Hotspur. This group is commonly referred to as the "Big 6." The figure below shows average transfer spending for Big 6 clubs over the past seven seasons compared to the average for the rest of the league.
 
@@ -43,7 +48,7 @@ In order to get a sense of the current mechanics of the EPL transfer market, one
 https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Big%20Six%20vs.%20Rest%20of%20League%20Transfer%20Spending.png
 )
 
-Clearly, Big 6 teams spend far more during every transfer window than their peers. This gulf has led many pundits and fans to believe that success in the league and transfer spending are highly correlated with one another. However, this is not the case. 
+Clearly, Big 6 teams spend far more on average than their peers. This gulf has led many pundits and fans to believe that success in the league and transfer spending are highly correlated with one another. However, this is not the case. 
 
 The graph below plots final league position against transfer spending for every team in the EPL by season.
 
@@ -66,13 +71,16 @@ As we can see, attackers and midfielders fetch the highest transfer fees amongst
 
 ![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Transfer%20CorrPlot.png)
 
-Thus, several surface-level indicators show that clubs value offensive players more highly than they do their defensive counterparts.
+Thus, several surface-level indicators show that clubs value offensive players more highly than they do their defensive counterparts. However, in order to more accurately determine the difference in variability caused by offensive vs. defensive ratings, I found it better to build a more robust statistical learning algorithm.
 
-There are other interesting plots to examine, though they are not necessarily pertinent to the direction of this project. For instance, we can look at a player's transfer fee based on his age.
+#### The Model ####
 
-![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Transfer%20Fee%20vs.%20Age.png)
+The model used for analysis was a multiple linear regression of player transfer fees. After building the first model, it was clear that the attributes of height, international caps and number of games played were statistically irrelevant in predicting transfer fee. After removing them and further tuning the model, I arrived at a fairly accurate predictor.
 
-Here, it seems that clubs highly value players in their early twenties, likely wanting to capture young talent before injury strikes. 
+
+
+
+
 
 
 
