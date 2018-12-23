@@ -16,19 +16,19 @@
 ## The Data ##
 
 #### Team Performance Statistics ####
-I compiled the in-game statsitcs of each team in the EPL for every season from 13/14 to 17/18 using data from Opta Sports, henceforth referred to as the "team-stats" data set. These include offensive, possession-based, defensive and goalkeeping statiscs for each team on a per game basis. I then merged these with data for each club's transfer spending, final points total and final league position for each season. The image below gives a brief snapshot of the data.
+I compiled the in-game statsitcs of each team in the EPL for every season from 13/14 to 17/18 using data from Opta Sports, henceforth referred to as the "team-stats" data set. These include offensive, possession-based, defensive and goalkeeping statiscs for each team on a per game basis. I then merged these with data for each club's transfer spending, final points total and final league position for each season. The image below gives a brief snapshot of the data. The raw data set can be viewed ![here](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Data/EPL_stats.csv) 
 
 ![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Competitve%20Stats%20Data-Set.png)
 
-I also compiled a data set that tracks goal statistics at different game states, henceforth referred to as the "game-state" data set. Similar to the team-stats data set, it combines league results with performance statistics, specifically the number of goals scored/conceded in a given 15-minute interval of every game as well as goals scored/conceded based on score difference.
+I also compiled a data set that tracks goal statistics at different game states, henceforth referred to as the "game-state" data set. Similar to the team-stats data set, it combines league results with performance statistics, specifically the number of goals scored/conceded in a given 15-minute interval of every game as well as goals scored/conceded based on score difference. 
 
 ![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Game-State-Data.png)
 
-For instance, in the snapshot above, we see that out of all the goals that Arsenal scored in the 17/18 season, 12 came in minutes 1-15 of the game. Similarly, Arsenal allowed 9 goals in the first fifteen minutes of games for that season. The full data set can be found here. 
+For instance, in the snapshot above, we see that out of all the goals that Arsenal scored in the 17/18 season, 12 came in minutes 1-15 of the game. Similarly, Arsenal allowed 9 goals in the first fifteen minutes of games for that season. The raw data set can be found ![here](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Data/game_state_data.csv). 
 
 
 #### Transfer Data ####
-The second data set was compiled from Opta Sports data and data from https://www.transfermarkt.com/. It lists all the players pruchased by EPL clubs during the seasons from 13/14 to 17/18 and their transfer fee. Additional parameters include player attributes that I hypothesized would be highly likley to influence the tranfser fee. The list was based on reviewing current literature on the subject, which I have compiled here. From the literature, it seems that the player attributes that most greatly affect trasnfer fee are age, number of games played in the previous season, number of international caps, nationality and height. I combined these with offensvie, defensive and possession-based ratings to create the final data set. A snapshot is shown below, and the full data set can be found here.
+The second data set was compiled from Opta Sports data and data from https://www.transfermarkt.com/. It lists all the players pruchased by EPL clubs during the seasons from 13/14 to 17/18 and their transfer fee. Additional parameters include player attributes that I hypothesized would be highly likley to influence the tranfser fee. The list was based on reviewing current literature on the subject, which I have compiled here. From the literature, it seems that the player attributes that most greatly affect trasnfer fee are age, number of games played in the previous season, number of international caps, nationality and height. I combined these with offensvie, defensive and possession-based ratings to create the final data set. A snapshot is shown below, and the raw data set can be found ![here](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Data/transfer-data.csv).
 
 ![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Transfer-Data.png)
 
