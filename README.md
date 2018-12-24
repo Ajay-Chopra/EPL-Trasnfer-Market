@@ -77,6 +77,71 @@ Thus, several surface-level indicators show that clubs value offensive players m
 
 The model used for analysis was a multiple linear regression of player transfer fees. After building the first model, it was clear that the attributes of height, international caps and number of games played were statistically irrelevant in predicting transfer fee. After removing them and further tuning the model, I arrived at a fairly accurate predictor.
 
+#### Results ####
+
+A summary of the model results is shown below.
+
+![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/transfer-model-summary.png)
+
+The final model had an R-squared value of 0.9645.
+
+As we can see, a player's age, with a p-value of 0.000109, is the most likely to affect his transfer fee. This is not especially surprising, given the small window in which most footballers achieve their peak performance. However, what is more interesting is that a player's offensive ability is far more likely to affect his transfer fee than is his defensive ability. 
+This confirms trends identified in the initial data analysis showing that a offensive ratings are highly correlated to transfer fee, or at least more so than defensive ratings.
+
+Thus, given the combination of high-level analysis and results from the model, it is safe to say that **football managers in the EPL value offensive capability more than defensive skill**. This also agrees with results from Sally & Anderson (2013).
+
+## Why Defense Is Undervalued ##
+
+Having now established that EPL clubs tend to value offensive more than defense, I will now show that they in fact *undervalue* defense. In other words, I will illustrate that a quality defense is *highly significant* in improving final league position. 
+
+### Analyzing Team Performance Statistics ###
+
+Here, I analyze the team performance statistics in order to determine which attributes of team performance improve league position at the end of the season.
+
+The first natural thing to do is to look at the correlation between final league position and relevant offensive and defensive statistics. Simply speaking, the "end product" of a high quality offense is a goal scored, while the end product of a low quality defense is a goal conceded. Thus, I decided to look at the correlation between goals scored, goals conceded and final league position. The result is shown below.
+
+![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/offense%20vs.%20defense%20correlation.png)
+
+Based on the plot, it seems that, in absolute value terms, goals scored and goals conceded have roughly equal correlations to a team's final league position. Hence, one might assume that conceding fewer goals would be nearly as beneficial as scoring more of them. However, instead of relying on assumption, I once again return to a more robust method of statistical analysis--a multiple linear regression.
+
+#### The Model ####
+
+Unlike the previous regression model, there is an extremely large (37) set of predictors to consider. Thus, the model required far more tuning in order to remove noise and identify predictors that were likeley to vary final league position. The summaries of two most accurate models are shown below.
+
+**Model 1**
+
+![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/position-model-summary.png)
+
+
+**Model 2**
+
+![alt text](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/position-model2-summary.png)
+
+The two models had an R-squared value of 0.9675 and 0.9567 respectively. In model 1, the parameters most likely to affect final league position are in fact goals conceded (Goals.Conceded) and defensive errors (Def.Errors), while in model 2, they are tackles lost (Tackles.Lost) and goals from corner kicks (Goals.Corn). While there is unfortunately not much overlap in terms of statistically relevant parameters between the two models, one thing that is common is the high variance of league position based on defensive statsitics, rather than offensive statistics. More specifically, defensive mistakes and errors seem to have a high probability of affecting league position than do other measures of defensive play.
+
+### Conclusions From Model Results ###
+
+Both of the models show us that a team's defensive performance, specifically the limiting of defensive errors, is extremely impactful in determining league performance. In a performance sense, defense seems to be just as valuable as offense, if not more so. Rationally, one would expect that quality defensive players would be in high demand in the transfer market, thus making their transfer fees at least on par with that of attackers and midfielders. However, as we know from looking at the transfer data in the previous section, this is not the case at all.
+
+The conclusion seems to be, then, that defense is **undervalued** by EPL teams. Managers and scouts consistently use offensive performance rather than defensive performance in order to determine transfer fees, thus spending their money inefficiently. 
+
+This supports similar arguments from Sally & Anderson, as well as Soccernomics authors Kuper and Szymanski that defense is undervalued by many professional football clubs. Hence, we have one potential cause for the inefficiency observed in the EPL transfer market. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
