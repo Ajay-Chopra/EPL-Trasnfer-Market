@@ -120,6 +120,36 @@ The conclusion seems to be that **defense is undervalued** by EPL teams. Manager
 
 This supports similar arguments from Sally & Anderson, as well as Soccernomics authors Kuper and Szymanski that defense is undervalued by many professional football clubs. Hence, we have one potential cause for the inefficiency observed in the EPL transfer market. 
 
+## Why Clubs Overvalue Their Best Player ##
+
+### Strong-Link vs. Weak-Link ###
+
+In economic terminology, the performance of a **strong-link** system is most dependent on its best performing component, while the performance of a **weak-link** system is most dependent on its worst performing component. This categorization can be applied to several contexts including the U.S. transportation network, education system and of course, sports. Several analysts, such as economist David Sally, have argued that football is a weak-link game--that a team's performance is most dependent on the skill of its weakest player. However, there have also been those who argue that it is trong-link--that a strong enough star player can lead an otherwise mediocre team to success. I use the player-rankings data to examine the merits of each of these arguments.
+
+### How EPL Clubs Value Talent ###
+
+The best way to see how clubs in the EPL value their players is to look at their wages. Using publicly available wage data for every club in the EPL and correlating it with data found from the FIFA player rankings, I looked at the percentage of the total wage bill that each club pays to its best, median and worst ranked player. The results are shown below.
+
+<img src="https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/epl-wage-dist.png" width="500">
+
+From this data set, we can see that Manchester City spends about 9.6% of its total wage bill on its best player and about 3.7% on its worst player. In fact, a majority of EPL clubs spend over 8% of their wage bill on their best player. This is quite a skewed distribution, considering there is an average of 26 players in each squad.
+
+Clearly, it seems that EPL clubs value their best player highly, which makes sense on face value. However, a closer look at relevant data suggests otherwise. 
+
+### Analyzing the Player-Rankings Data ###
+
+Using the FIFA player rankings from 2018 and 2017, I examined how final league position of clubs Europe's top five leagues was affected based on the rankings of the club's best, median and worst ranked player.
+
+#### Building the Model ####
+
+Once again, I use a multiple linear regression to examine the effects of the three parameters. As there were not a large amount of predictors to consider, the model did not need to be tuned very much. A summary of the results are shown below. 
+
+<img src="https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/player.rankings.summary.png" width="500">
+
+From the summary, we can see that it is in fact a team's median player that most greatly affects its final league position. 
+
+
+
 
 
 
