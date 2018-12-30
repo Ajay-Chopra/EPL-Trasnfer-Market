@@ -1,8 +1,8 @@
 # Analyzing Transfer Market Inefficiencies in the English Premier League #
 
-  In this project, I aim to highlight prevalent inefficiencies in the player transfer market of the English Premier League (EPL), the most popular professional football league in the world. During the winter and summer transfer windows, clubs in the EPL spend in total about $1.5 billion purchasing players from other teams. However, consistent analysis shows that transfer spending has little correlation with competitive success, suggesting that many clubs spend their money inefficiently.
+  In this project, I aim to highlight prevalent inefficiencies in the player transfer market of the English Premier League (EPL), the most popular professional football league in the world. During the winter and summer transfer windows, clubs in the EPL spend a total of about $1.5 billion purchasing players from other teams. However, consistent analysis shows that transfer spending has little correlation with competitive success, suggesting that many clubs spend their money inefficiently.
 	
-  I use three main data sets for analysis. The first tracks wage spending, transfer spending, final league position and performance statistics of clubs in the EPL over the past five seasons. The second is a list of all players purchased by clubs in the EPL over the same period along with their transfer fee, provided it was disclosed. Each player is measured on parameters of age, number of games played and the same set of performance statistics used in the team-level data. The last data set is a comprehensive ranking of all professional footballers using data from the videogame FIFA 2018 and FIFA 2017, published by EA Sports.
+  I use three main data sets for analysis. The first tracks wage spending, transfer spending, final league position and performance statistics of clubs in the EPL over the past five seasons. The second is a list of all players purchased by clubs in the EPL over the same period along with their transfer fee, provided it was disclosed. Each player is measured on parameters of age, number of games played as well as offensive, defensive and possession based statistics. The last data set is a comprehensive ranking of all professional footballers using data from the videogames FIFA 2018 and FIFA 2017, published by EA Sports.
   
  
 ### Summary of Results ###
@@ -19,21 +19,21 @@ I compiled the in-game statsitcs of each team in the EPL for every season from 1
 
  
 #### Transfer Data ####
-The second data set was compiled from Opta Sports data and data from https://www.transfermarkt.com/. It lists all the players pruchased by EPL clubs during the seasons from 13/14 to 17/18 and their transfer fee. Additional parameters include player attributes that I hypothesized would be highly likley to influence the tranfser fee. From reviewing current literature, it seems that the player attributes that most greatly affect trasnfer fee are age, number of games played in the previous season, number of international caps, nationality and height. I combined these with offensvie, defensive and possession-based ratings to create the final data set. A snapshot is shown below, and the raw data set can be found ![here](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Data/transfer-data.csv).
+The second data set was compiled from Opta Sports data and data from https://www.transfermarkt.com/. It lists all the players pruchased by EPL clubs during the seasons 13/14 to 17/18 and their transfer fee. Additional parameters include player attributes that I hypothesized would be highly likley to influence the tranfser fee. From reviewing current literature, it seems that the player attributes that most greatly affect trasnfer fee are age, number of games played in the previous season, number of international caps, nationality and height. I combined these with offensvie, defensive and possession-based ratings to create the final data set. A snapshot is shown below, and the raw data set can be found ![here](https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Data/transfer-data.csv).
 
 <img src="https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Transfer-Data.png" width="650">
 
 
 #### Player Rankings ####
 
-The last data set is the the full ranking of every professional footballer as used in the FIFA 2018 videogame. While the exact methodology that EA Sports uses to construct its rankings is obsucre, the FIFA 2018 rankings are the best we have in terms of current, comprehensive player valuations. The full data set can be found [here](https://www.kaggle.com/thec03u5/fifa-18-demo-player-dataset).
+The last data set is the the full ranking of every professional footballer as used in the FIFA 2018 videogame. While the exact methodology that EA Sports uses to construct its rankings is obsucre, the FIFA 2018 rankings are the best we have in terms of current, comprehensive player valuations. The full data set can be found via [Kaggle](https://www.kaggle.com/thec03u5/fifa-18-demo-player-dataset).
 
 <img src="https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Player-Rankings.png" width="650">
 
 
 ## Understanding the Transfer Market ##
 
-In order to get a sense of the current mechanics of the EPL transfer market, one ought to begin by separating big and small spenders. Currently, transfer spending in the EPL is dominated by the league's wealthiest and most successful clubs--Arsenal, Chelsea, Liverpool, Manchester United, Manchester City and Tottenham Hotspur. This group is commonly referred to as the "Big 6." The figure below shows average transfer spending for Big 6 clubs over the past seven seasons compared to the average for the rest of the league.
+In order to get a sense of the current mechanics of the EPL transfer market, one ought to begin by separating big and small spenders. Currently, transfer spending in the EPL is dominated by the league's wealthiest and most successful clubs--Arsenal, Chelsea, Liverpool, Manchester United, Manchester City and Tottenham Hotspur. This group is commonly referred to as the "Big Six." The figure below shows average transfer spending for Big Six clubs over the past seven seasons compared to the average for the rest of the league.
 
 
 <img src="https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Big%20Six%20vs.%20Rest%20of%20League%20Transfer%20Spending.png" width="450">
@@ -46,12 +46,12 @@ The graph below plots final league position against transfer spending for every 
 <img src="https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Position%20vs.%20Transfer%20Spending%20Plot.png" width="450">
 
 
-From a simple visual test, it is easy to see that higher transfer spending is not highly correlated with a better league position. In fact, after creating a corrplot for the data, I found that there is only a 0.07 correlation between transfer spending and final league position. This is not only less than many members of the footballing community would likely suggest, but also far less than it ought to be, given the sums of money spent and the importance placed on trasnfer windows. In other words, it seems as if football clubs are often receiving a poor return on their trasnsfer investments. 
+From a simple visual test, it is easy to see that higher transfer spending is not highly correlated with a better league position. In fact, after creating a corrplot for the data, I found that there is only a 0.2% correlation between transfer spending and final league position. This is not only less than many members of the footballing community would likely suggest, but also far less than it ought to be, given the sums of money spent and the importance placed on trasnfer windows. In other words, it seems as if football clubs are often receiving a poor return on their trasnsfer investments. 
 
 
 ## How Clubs Buy Players ##
 
-In order to understand where inefficienices arise in the transfer market, one must first understand what criteria clubs use to value players. I analyze the transfer data set in order to answer this question.
+In order to understand where inefficienices arise in the transfer market, one must first understand what criteria clubs use to determine transfer fees. I analyze the transfer data set in order to answer this question.
 
 First, I look at transfer price based on player position. The plot is shown below.
 
@@ -62,7 +62,7 @@ As we can see, attackers and midfielders fetch the highest transfer fees amongst
 
 <img src="https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/Transfer%20CorrPlot.png" width="450">
 
-Thus, several surface-level indicators show that clubs value offensive players over their defensive counterparts. However, in order to more accurately determine the difference in variability caused by offensive vs. defensive ratings, I found it better to employ a more robust statistical learning algorithm.
+Thus, several surface-level indicators show that clubs value offensive players over their defensive counterparts. However, in order to more accurately determine the variability caused by offensive and defensive ratings, I found it better to employ a more robust statistical learning algorithm.
 
 #### The Model ####
 
@@ -77,13 +77,13 @@ A summary of the model results is shown below.
 The final model had an R-squared value of 0.9645.
 
 As we can see, a player's age, with a p-value of 0.000109, is the most likely to affect his transfer fee. This is not especially surprising, given the small window in which most footballers achieve their peak performance. However, what is more interesting is that a player's offensive ability is far more likely to affect his transfer fee than is his defensive ability. 
-This confirms trends identified in the initial data analysis showing that a offensive ratings are highly correlated to transfer fee, or at least more so than defensive ratings.
+This confirms trends identified in the initial data analysis showing that offensive ratings are highly correlated to transfer fee, or at least more so than defensive ratings.
 
-Thus, given the combination of high-level analysis and results from the model, it is safe to say that **football managers in the EPL value offensive capability more than defensive skill**. This supports results from Sally & Anderson (2013).
+Thus, given the combination of high-level analysis and results from the model, it is safe to say that **football managers in the EPL value offensive capability more than defensive skill**. This supports results from [Sally & Anderson](https://www.researchgate.net/publication/323521877_THE_NUMBERS_GAME).
 
 ## Why Defense Is Undervalued ##
 
-Having now established that EPL clubs tend to value offensive more than defense, I will now show that they in fact *undervalue* defense. In other words, I will illustrate that a quality defense is *highly significant* in improving final league position. 
+Having now established that EPL clubs tend to value offensive more than defense, I will now show that they in fact *undervalue* defense. In other words, I will illustrate that defensive performance is statistically significant in improving final league position. 
 
 ### Analyzing Team Performance Statistics ###
 
@@ -93,7 +93,7 @@ The first natural thing to do is to look at the correlation between final league
 
 <img src="https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/offense%20vs.%20defense%20correlation.png" width="450">
 
-Based on the plot, it seems that, in absolute value terms, goals scored and goals conceded have roughly equal correlations to a team's final league position. Hence, one might assume that conceding fewer goals would be nearly as beneficial as scoring more of them. However, instead of relying on assumption, I once again return to a more robust method of statistical analysis--a multiple linear regression.
+Based on the plot, it seems that, in absolute value terms, goals scored and goals conceded have roughly equal correlations to a team's final league position. Hence, one might assume that conceding fewer goals would be nearly as beneficial as scoring more of them. However, instead of relying on assumption, I once again use multiple linear regression to analyze the data.
 
 #### The Model ####
 
@@ -108,11 +108,11 @@ Unlike the previous regression model, there is an extremely large (37) set of pr
 
 <img src="https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/position-model2-summary.png" width="650">
 
-The two models had an R-squared value of 0.9675 and 0.9567 respectively. In model 1, the parameters most likely to affect final league position are in fact goals conceded (Goals.Conceded) and defensive errors (Def.Errors), while in model 2, they are tackles lost (Tackles.Lost) and goals from corner kicks (Goals.Corn). While there is unfortunately not much overlap in terms of statistically relevant parameters between the two models, one thing that is common is the high variance of league position based on defensive statsitics, rather than offensive statistics. More specifically, defensive mistakes and errors seem to have a high probability of affecting league position than do other measures of defensive play.
+The two models had an R-squared value of 0.9675 and 0.9567 respectively. In model 1, the parameters most likely to affect final league position are in fact goals conceded (Goals.Conceded) and defensive errors (Def.Errors), while in model 2, they are tackles lost (Tackles.Lost) and goals from corner kicks (Goals.Corn). While there is unfortunately not much overlap in terms of statistically relevant parameters between the two models, one thing that is common is the high variance of league position based on defensive statsitics, rather than offensive statistics. More specifically, defensive mistakes and errors seem to have a higher probability of affecting league position than do other measures of defensive play.
 
 ### Conclusions From Model Results ###
 
-Both of the models show us that a team's defensive performance, specifically the limiting of defensive errors, is extremely impactful in determining league performance. In a performance sense, defense seems to be just as valuable as offense, if not more so. Rationally, one would expect that quality defensive players would be in high demand in the transfer market, thus making their transfer fees at least on par with that of attackers and midfielders. However, as we know from looking at the transfer data in the previous section, this is not the case at all.
+Both of the models show us that a team's defensive performance, specifically the limiting of defensive errors, is extremely important in determining league position. In a performance sense, defense seems to be just as valuable as offense, if not more so. Rationally, one would expect that quality defensive players would be in high demand in the transfer market, thus making their transfer fees at least on par with that of attackers and midfielders. However, as we know from looking at the transfer data in the previous section, this is not the case at all.
 
 The conclusion seems to be that **defense is undervalued** by EPL teams. Managers and scouts consistently use offensive performance rather than defensive performance in order to determine transfer fees, thus spending their money inefficiently. 
 
@@ -121,14 +121,13 @@ This supports similar arguments from [Sally & Anderson](https://www.researchgate
 ## Why Clubs Overvalue Their Best Player ##
 
 
-
 ### Strong-Link vs. Weak-Link ###
 
-In economic terminology, the performance of a **strong-link** system is most dependent on its best performing component, while the performance of a **weak-link** system is most dependent on its worst performing component. This categorization can be applied to several contexts including the U.S. transportation network, education system and of course, sports. Several analysts, such as economist [David Sally](https://www.forbes.com/sites/zachslaton/2013/07/30/everything-we-know-about-soccer-is-wrong/#ae43d0778319), have argued that football is a weak-link game--that a team's performance is most dependent on the skill of its weakest player. However, there have also been those who argue that it is trong-link--that a strong enough star player can lead an otherwise mediocre team to success. I use the player-rankings data to examine the merits of each of these arguments.
+The performance of a **strong-link** system is most dependent on its best performing component, while the performance of a **weak-link** system is most dependent on its worst performing component. This categorization can be applied to several areas including the U.S. transportation network, education system and of course, sports. Several analysts, such as economist [David Sally](https://www.forbes.com/sites/zachslaton/2013/07/30/everything-we-know-about-soccer-is-wrong/#ae43d0778319), have argued that football is a weak-link game--that a team's performance is most dependent on the skill of its weakest player. However, there have also been those who argue that it is trong-link--that a strong enough star player can lead an otherwise mediocre team to success. I use the player-rankings data to examine the merits of each of these arguments.
 
 ### How EPL Clubs Value Talent ###
 
-The best way to see how clubs in the EPL value their players is to look at their wages. Using publicly available wage data for every club in the EPL and correlating it with data found from the FIFA player rankings, I looked at the percentage of the total wage bill that each club pays to its best, median and worst ranked player. The results are shown below.
+The best way to see how clubs in the EPL value their players is to look at their wages. Using publicly available wage data for every club in the EPL and correlating it with data from the FIFA player rankings, I looked at the percentage of the total wage bill that each club pays to its best, median and worst ranked player. The results are shown below.
 
 <img src="https://github.com/Ajay-Chopra/EPL-Trasnfer-Market/blob/master/Images/epl-wage-dist.png" width="500">
 
@@ -138,7 +137,7 @@ Clearly, it seems that EPL clubs value their best player highly, which makes sen
 
 ### Analyzing the Player-Rankings Data ###
 
-Using the FIFA player rankings from 2018 and 2017, I examined how final league position of clubs Europe's top five leagues was affected based on the rankings of the club's best, median and worst ranked player. Specifically, I use a multiple linear regression to examine variability based on these predictors. 
+Using the FIFA player rankings from 2018 and 2017, I examined how final league position of clubs in Europe's top five leagues was affected based on the rankings of the club's best, median and worst ranked player. Specifically, I use a multiple linear regression to examine variability based on these predictors. 
 
 #### Results of the Model ####
 
@@ -154,7 +153,7 @@ The results above seem to suggest that managers and scouts--even at the highest 
 
 It should be noted that given relatively small amount of football data freely published online, it is difficult to draw any concrete conclusions from such statistial analysis. Moreover, as with all sports, statistics will never hold all the answers to football, nor will they be totally applicable in every situtation. 
 
-However, conducting a rigorous analysis such as the one above does at least give us greater insight into the mechanics of the player transfer market, which at many times can seem senseless and chaotic even to casual observers. More importantly, it illustrates how much knowledge can be extracted simply reading the numbers--even about a game that has existed for almost 150 years. 
+However, conducting a rigorous analysis such as the one above does at least give us greater insight into the mechanics of the player transfer market, which at many times can seem senseless and chaotic even to casual observers. More importantly, it illustrates how much knowledge can be extracted simply by reading the numbers--even about a game that has existed for almost 150 years. 
 
 
 
