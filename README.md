@@ -151,7 +151,7 @@ From the summary, we can see that it is in fact the rank of a team's median play
 
 The results above seem to suggest that managers and scouts--even at the highest level of professional football--are prone to systematic errors and misjudgments. While this may not matter for the clubs that always have enough quality players to ensure title contention, it could make all the difference for clubs battling relegation. 
 
-It should be noted that given relatively small amount of football data freely published online, it is difficult to draw any concrete conclusions from such statistial analysis. Moreover, as with all sports, statistics will never hold all the answers to football, nor will they be totally applicable in every situtation. 
+It should be noted that given the relatively small amount of football data freely published online, it is difficult to draw any concrete conclusions from such statistial analysis. Moreover, as with all sports, statistics will never hold all the answers to football, nor will they be totally applicable in every situtation. 
 
 However, conducting a rigorous analysis such as the one above does at least give us greater insight into the mechanics of the player transfer market, which at many times can seem senseless and chaotic even to casual observers. More importantly, it illustrates how much knowledge can be extracted simply by reading the numbers--even about a game that has existed for almost 150 years. 
 
